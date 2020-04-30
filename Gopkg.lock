@@ -120,6 +120,14 @@
   version = "v2.9.6"
 
 [[projects]]
+  digest = "1:8662e3bc0e98681414646b71dfc7996c5451737fe98f7cea1bbb3e9b1424c301"
+  name = "github.com/evanphx/json-patch"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "78cf029964937ffcb67feaeac1fe23d9cef0d26a"
+  version = "v5.0.0"
+
+[[projects]]
   digest = "1:81466b4218bf6adddac2572a30ac733a9255919bc2f470b4827a317bd4ee1756"
   name = "github.com/ghodss/yaml"
   packages = ["."]
@@ -128,9 +136,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:53becd66889185091b58ea3fc49294996f2179fb05a89702f4de7d15e581b509"
+  digest = "1:b49dd34bdf52d28b69e41181bed939bdf48e1152ef54d21db643e3c50b3b33c0"
   name = "github.com/go-logr/logr"
-  packages = ["."]
+  packages = [
+    ".",
+    "testing",
+  ]
   pruneopts = "NUT"
   revision = "9fb12b3b21c5415d16ac18dc5cd42c1cfdd40c4e"
   version = "v0.1.0"
@@ -339,14 +350,6 @@
   version = "v0.3.7"
 
 [[projects]]
-  branch = "master"
-  digest = "1:64609ee187eff61f8e4d2723f8fde9d0282ce19f8ad830528869f0f33a42ff39"
-  name = "github.com/jcrossley3/manifestival"
-  packages = ["."]
-  pruneopts = "NUT"
-  revision = "78b6b04ae6ff35401397219bbbf0e97cd349712e"
-
-[[projects]]
   digest = "1:da62aa6632d04e080b8a8b85a59ed9ed1550842a0099a55f3ae3a20d02a3745a"
   name = "github.com/joho/godotenv"
   packages = ["."]
@@ -384,6 +387,19 @@
   ]
   pruneopts = "NUT"
   revision = "1ea4449da9834f4d333f1cc461c374aea217d249"
+
+[[projects]]
+  digest = "1:da23b74834c2eb31b3d27cfdf799877bb2d6cd875f0465cbc47cd871c8ed5e74"
+  name = "github.com/manifestival/manifestival"
+  packages = [
+    ".",
+    "overlay",
+    "patch",
+    "sources",
+  ]
+  pruneopts = "NUT"
+  revision = "1922f5c7b1398ce037fb80405e4ecee9f6fe6bd0"
+  version = "v0.5.0"
 
 [[projects]]
   digest = "1:56dbf15e091bf7926cb33a57cb6bdfc658fc6d3498d2f76f10a97ce7856f1fde"
@@ -858,7 +874,7 @@
   revision = "0fe22c71c47604641d9aa352c785b7912c200562"
 
 [[projects]]
-  digest = "1:27ae2f5b3e432bf8ab7cd0f9faaba294665a8b2ddc40672fa1bea931372b4455"
+  digest = "1:bd0cbe2231b0a63d297ddd9eb319d5e6bd647f9ee793beed611e7cde7e5cc258"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/equality",
@@ -892,6 +908,7 @@
     "pkg/util/framer",
     "pkg/util/intstr",
     "pkg/util/json",
+    "pkg/util/jsonmergepatch",
     "pkg/util/mergepatch",
     "pkg/util/naming",
     "pkg/util/net",
@@ -1122,8 +1139,8 @@
   analyzer-version = 1
   input-imports = [
     "github.com/go-openapi/spec",
-    "github.com/jcrossley3/manifestival",
     "github.com/knative/pkg/apis",
+    "github.com/manifestival/manifestival",
     "github.com/operator-framework/operator-sdk/pkg/k8sutil",
     "github.com/operator-framework/operator-sdk/pkg/leader",
     "github.com/operator-framework/operator-sdk/pkg/log/zap",

@@ -5,7 +5,7 @@ import (
 	go_errors "errors"
 	"flag"
 
-	mf "github.com/jcrossley3/manifestival"
+	mf "github.com/manifestival/manifestival"
 	eventingv1alpha1 "github.com/openshift-knative/knative-kafka-operator/pkg/apis/eventing/v1alpha1"
 	"github.com/openshift-knative/knative-kafka-operator/version"
 	"github.com/operator-framework/operator-sdk/pkg/predicate"
